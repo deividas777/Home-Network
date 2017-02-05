@@ -1,0 +1,758 @@
+[
+    {
+        "video_id": "188",
+        "comment": "Great Movie about spies",
+        "title": "Snowden",
+        "date": "Fri Jan 06 2017 09:04:27 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "188",
+        "comment": "I love this movie",
+        "title": "Snowden",
+        "date": "Fri Jan 06 2017 09:05:28 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "192",
+        "comment": "Horrible Movie",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 09:24:29 GMT+0000 (GMT)",
+        "comment_id": "6",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "2"
+    },
+    {
+        "video_id": "195",
+        "comment": "Terrible Movie",
+        "title": "Spectral",
+        "date": "Fri Jan 06 2017 09:52:51 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "199",
+        "comment": "Great Movie",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 10:16:28 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "195",
+        "comment": "So bad I even describe",
+        "title": "Spectral",
+        "date": "Fri Jan 06 2017 11:10:57 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "199",
+        "comment": "I Love this movie",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 11:58:35 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "199",
+        "comment": "Worst of all of this series",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 11:59:59 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "190",
+        "comment": "Brilliant Movie great drama",
+        "title": "Genius",
+        "date": "Fri Jan 06 2017 17:57:28 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "9"
+    },
+    {
+        "video_id": "190",
+        "comment": "I love this movie",
+        "title": "Genius",
+        "date": "Fri Jan 06 2017 17:58:41 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "9"
+    },
+    {
+        "video_id": "195",
+        "comment": "Rough Movie",
+        "title": "Spectral",
+        "date": "Fri Jan 06 2017 18:00:16 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "1"
+    },
+    {
+        "video_id": "195",
+        "comment": "Wasting of your time and money",
+        "title": "Spectral",
+        "date": "Fri Jan 06 2017 18:04:34 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "1"
+    },
+    {
+        "video_id": "199",
+        "comment": "Inferno is a grabber, and Hanks knows Langdon so well, he wears that character like a somewhat worn yet still well-constructed suit of clothes.",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 18:10:45 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "199",
+        "comment": "Nothing is what it seems, unless it seems ridiculous, in which case its exactly what it seems.",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 18:11:27 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "183",
+        "comment": "The movie cops out by going soft in the end, but it's still hardcore hilarity for stressed mom's looking for a girls night out.",
+        "title": "Bad Moms",
+        "date": "Fri Jan 06 2017 18:12:18 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "183",
+        "comment": "As much of the film's jokes that fall flat,it gets yet another break-out performance from Hahn, who plays the unfiltered, horn-dog divorcee, and Bell, whose clear-eyed manias are many of the film's best moments in the early going.",
+        "title": "Bad Moms",
+        "date": "Fri Jan 06 2017 18:13:26 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "184",
+        "comment": "Movies shouldn't provide moral instruction but the best incorporate competing philosophies. Unfortunately, there is no one Scorsese can bring himself to be quite as interested in as Belfort.",
+        "title": "The Wolf of Wall Street",
+        "date": "Fri Jan 06 2017 18:13:55 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "184",
+        "comment": "Scorsese is fascinated by procedure, by drawing back the curtain and showing us how things happen, though he keeps the picture nimble and entertaining enough to avoid burying himself in the minutiae.",
+        "title": "The Wolf of Wall Street",
+        "date": "Fri Jan 06 2017 18:15:51 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "184",
+        "comment": "Is it immoral to celebrate villainy? There's not much point in pretending The Wolf of Wall Street doesn't do that, pretty exuberantly too.",
+        "title": "The Wolf of Wall Street",
+        "date": "Fri Jan 06 2017 18:16:55 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "185",
+        "comment": "Many may hail Shame as a voyeuristic masterpiece when in fact it's an empty provocation verging on the ludicrous. ",
+        "title": "Shame",
+        "date": "Fri Jan 06 2017 18:17:59 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "185",
+        "comment": "With tremendous performances from Fassbender and Mulligan, and such superb technique from McQueen, this is a horrible inferno.",
+        "title": "Shame",
+        "date": "Fri Jan 06 2017 18:18:34 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "187",
+        "comment": "Director Derek Cianfrance attempts to bring the emotional rawness of his previous films and influences to the melodrama genre with The Light Between Oceans, but he never quite pulls off the feat.",
+        "title": "The Light Between Oceans",
+        "date": "Fri Jan 06 2017 18:19:36 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "187",
+        "comment": "What Cianfrance can't do is find a definitive ending: the film has at least three as it builds to a high pitch and thus runs long. But along the way it's passionately gripping and much more than the cliche of a tear-jerking romance.",
+        "title": "The Light Between Oceans",
+        "date": "Fri Jan 06 2017 18:20:17 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "188",
+        "comment": "Partiality is the heel in this Achilles film; though to this Achilles film's credit, it also outruns, as storytelling, the tortoise forebodings we might have had about a true-life plot so cerebral and cyber-centric.",
+        "title": "Snowden",
+        "date": "Fri Jan 06 2017 18:20:52 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "188",
+        "comment": "The movie falls between two stools, however, lacking either the irreverence of satire or the tautness of a well-tooled thriller.",
+        "title": "Snowden",
+        "date": "Fri Jan 06 2017 18:21:28 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "190",
+        "comment": "Firth and Law falter with their characters' awkward bromance: the former a fatherly cipher (will he ever take off that fedora?); the latter a clatter of drunken scribe clich\u00e9s.",
+        "title": "Genius",
+        "date": "Fri Jan 06 2017 18:22:01 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "190",
+        "comment": "Perhaps the best advertisement for Genius -- not only did it make me want to revisit Berg's book, it had me lining up the Wolfe, Fitzgerald and Hemingway on the e-book runway.",
+        "title": "Genius",
+        "date": "Fri Jan 06 2017 18:22:39 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "191",
+        "comment": "By the end we have warmed -- almost -- to the innocent villainy of two con folk serving a greater maladroit maleficence.",
+        "title": "War Dogs",
+        "date": "Fri Jan 06 2017 18:23:14 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "191",
+        "comment": "Gen-Y A-listers Jonah Hill and Miles Teller spark off each other marvellously in a rhapsodic mashing of The Wolf of Wall Street and The Big Short.",
+        "title": "War Dogs",
+        "date": "Fri Jan 06 2017 18:24:09 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "191",
+        "comment": "The satire hits with powder-puff force thanks largely to the film's ruinous lack of moral shading around David and Efraim's exploits.",
+        "title": "War Dogs",
+        "date": "Fri Jan 06 2017 18:25:44 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "195",
+        "comment": "I thought it was a really good, fun, solid film. Yes, they did reverse a guns and cameras into magic devices, but it was fine enough. I\u2019m in a university class on remote sensing and GIS, and all the talk about hyperspectral yadyada made me remember to study for finals. It is a dorky movie, but I felt it was really well constructed, and I rated it a 5 on Netflix.",
+        "title": "Spectral",
+        "date": "Fri Jan 06 2017 18:26:29 GMT+0000 (GMT)",
+        "comment_id": "4",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "193",
+        "comment": "The Guardian gave it four stars! It does look like a Well the Bext Exotic Marigold Hotel was successful so... kind of film.",
+        "title": "Mothers`s Day",
+        "date": "Fri Jan 06 2017 18:26:56 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "193",
+        "comment": "It's as feel good and life-affirming as a fire in an asbestos factory neighbouring a children's hospital.",
+        "title": "Mothers`s Day",
+        "date": "Fri Jan 06 2017 18:27:33 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "193",
+        "comment": "It here is less depth to this film than a petrol station greeting card, but it's essentially harmless.",
+        "title": "Mothers`s Day",
+        "date": "Fri Jan 06 2017 18:28:16 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "192",
+        "comment": "About half of what is now going on in all cinema is the product of technological advances in film-making and The Shallows makes much more intelligent use of them than the superheroes do.",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 18:29:10 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "192",
+        "comment": "If you're looking for a short, sharp hit of sun-soaked adrenaline (and who isn't?), you won't do any better than The Shallows",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 18:29:37 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "199",
+        "comment": "Its a lot more like a tweed-jacket version of Bond or Bourne or most any other thriller out there. But if Langdon is distinguished from the other globe-trotting saviors by his PhD, why are not his movies smarter?",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 18:30:19 GMT+0000 (GMT)",
+        "comment_id": "5",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "199",
+        "comment": "You know you've made some poor cinematic choices when you have to make Dan Brown characters less complex.",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 18:37:02 GMT+0000 (GMT)",
+        "comment_id": "6",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "199",
+        "comment": "Ultimately, Inferno is a long-winded mystery-adventure of the forgettable kind.",
+        "title": "Inferno",
+        "date": "Fri Jan 06 2017 18:42:07 GMT+0000 (GMT)",
+        "comment_id": "7",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "192",
+        "comment": "For those of us who prefer our survival dramas bare-bones and gritty, like Open Water, The Shallows may come across as the CW version. Its photogenic slickness detracts from its terror.",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 18:47:21 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "192",
+        "comment": "This is at best a guilty pleasure; B-movie fun while it lasts.",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 18:51:10 GMT+0000 (GMT)",
+        "comment_id": "4",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "192",
+        "comment": "This solid and effective survival thriller may not be Jaws, but it delivers quite well the thrills it aims for and has an exciting climax. Full review on filmotrope. com",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 18:59:20 GMT+0000 (GMT)",
+        "comment_id": "9",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "192",
+        "comment": "Equal parts taut and titillating... until it jumps the shark in its final act.",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 19:00:54 GMT+0000 (GMT)",
+        "comment_id": "6",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "192",
+        "comment": "Very effective, taut beach-borne thriller in which a lone surfer (Blake Lively) finds herself stranded between the beach and a large, hungry shark.",
+        "title": "The Shallows",
+        "date": "Fri Jan 06 2017 19:02:16 GMT+0000 (GMT)",
+        "comment_id": "13",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "193",
+        "comment": "This was not as bad as I thought it would be. Comfortable predictable yet still enjoyable to watch.",
+        "title": "Mothers`s Day",
+        "date": "Fri Jan 06 2017 19:03:46 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "193",
+        "comment": "I did have to issue a warning to my mother in case she planned a movie night out with friends or her sisters this holiday weekend: If you're going to see something for Mother's Day ... don't see Mother's Day.",
+        "title": "Mothers`s Day",
+        "date": "Fri Jan 06 2017 19:04:24 GMT+0000 (GMT)",
+        "comment_id": "4",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "179",
+        "comment": "Digital photography, with its limited ability to capture rapid movement, renders the close combat choppy and disorienting, and none of the kills is especially memorable.",
+        "title": "Mechanic: Resurrection",
+        "date": "Fri Jan 06 2017 20:01:34 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "179",
+        "comment": "For an actor who, with the \"Transporter\" films, once imbued the action genre with a new sense of possibility and winking sophistication, Mr. Statham is on cruise control.",
+        "title": "Mechanic: Resurrection",
+        "date": "Fri Jan 06 2017 20:04:04 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "174",
+        "comment": "Even if you don't own a calendar, one look at this dreary, derivative sci-fi thriller would tell you it's January.",
+        "title": "Vice",
+        "date": "Fri Jan 06 2017 20:12:16 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "2"
+    },
+    {
+        "video_id": "174",
+        "comment": "Recombining elements of \"Blade Runner,\" \"Strange Days\" and \"A.I.\" makes Bruce Willis' \"Vice\" an intriguing sci-fi thriller, but in the end it doesn't do enough with its ideas.",
+        "title": "Vice",
+        "date": "Fri Jan 06 2017 20:12:46 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "173",
+        "comment": "One of the more refreshingly uncomplicated summer blockbusters in recent memory.",
+        "title": "Suicide Squad",
+        "date": "Fri Jan 06 2017 20:14:03 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "173",
+        "comment": "The action is a been-there-done-that yawn, the obligatory wisecracks fall flat, and the CGI work looks like outtakes from Ghostbusters. The original.",
+        "title": "Suicide Squad",
+        "date": "Fri Jan 06 2017 20:14:25 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "173",
+        "comment": "I am happy to report that Suicide Squad is a significant improvement over its lumpen predecessor.",
+        "title": "Suicide Squad",
+        "date": "Fri Jan 06 2017 22:03:39 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "188",
+        "comment": "Stone's fixation on the sheer dang manliness of sticking one to the government, even digitally, feels misguided here from the off.",
+        "title": "Snowden",
+        "date": "Fri Jan 06 2017 22:32:44 GMT+0000 (GMT)",
+        "comment_id": "4",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "121",
+        "comment": "This is a brainy, brawny popcorn pleaser at its best. And one not easily forgotten.",
+        "title": "Inception",
+        "date": "Fri Jan 06 2017 23:29:05 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "9"
+    },
+    {
+        "video_id": "121",
+        "comment": "Nolan is so eager to make the movie work as an action blockbuster that he sacrifices storytelling to set pieces. Still, what set pieces.",
+        "title": "Inception",
+        "date": "Fri Jan 06 2017 23:29:39 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "73",
+        "comment": "Sneaks by being a retread, mainly because of the really thick tension and suspense [the director] pulls off with an effective score and sharp direction. ",
+        "title": "Dark Skies",
+        "date": "Fri Jan 06 2017 23:30:55 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "73",
+        "comment": "Works perfectly well as a turn-off-the-lights (and be-willing-to-play-along) piece of sci-fi-sprinkled horror amusement.",
+        "title": "Dark Skies",
+        "date": "Fri Jan 06 2017 23:31:14 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "69",
+        "comment": "All in all, a perfectly superior example of industrially fortified Hollywood fun, and as good a guarantee as Doug Liman can offer that we haven't seen the last of him yet.",
+        "title": "Edge of Tomorrow",
+        "date": "Fri Jan 06 2017 23:32:46 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "190",
+        "comment": "Great Movie",
+        "title": "Genius",
+        "date": "Sat Jan 07 2017 18:55:51 GMT+0000 (GMT)",
+        "comment_id": "4",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "199",
+        "comment": "great Movie to watch",
+        "title": "Inferno",
+        "date": "Sat Jan 07 2017 18:58:20 GMT+0000 (GMT)",
+        "comment_id": "8",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "81",
+        "comment": "The film is very well shot in tough circumstances and has a central performance from Idris Elba that can only be described as mind-boggling. Abraham Attah as the boy is pretty good too.",
+        "title": "Beast Of No Nation",
+        "date": "Sat Jan 07 2017 19:27:52 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "9"
+    },
+    {
+        "video_id": "81",
+        "comment": "Fukunaga packs the scenes with a documentary-like detail.",
+        "title": "Beast Of No Nation",
+        "date": "Sat Jan 07 2017 19:28:56 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "81",
+        "comment": "It wants to immerse itself entirely in Agu's experience, yet the filmmaker can't resist standing aloft in scenes that underscore the soldiers' ages and their actions, and pointing out easy ironies.",
+        "title": "Beast Of No Nation",
+        "date": "Sat Jan 07 2017 19:29:20 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "10"
+    },
+    {
+        "video_id": "62",
+        "comment": "Tarantino has returned to his first film's template - colourful characters, a single room, blood and betrayal - but this time in a framework that is deliberately designed for repeat viewing.",
+        "title": "The Hateful Eight",
+        "date": "Sat Jan 07 2017 19:30:34 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "9"
+    },
+    {
+        "video_id": "73",
+        "comment": "Genuinely creepy at the end, though starts out quite lame and even dull.",
+        "title": "Dark Skies",
+        "date": "Sun Jan 08 2017 11:09:00 GMT+0000 (GMT)",
+        "comment_id": "6",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "73",
+        "comment": "This movies goes into the \"I was pleasantly surprised\" category for those movies that are better-than-you-expected. The trailer was a yawner and the apparent premise initially screamed \"overdone!\" (Family is creeped out by a a bunch of weird, unexplainable things ",
+        "title": "Dark Skies",
+        "date": "Sun Jan 08 2017 11:10:30 GMT+0000 (GMT)",
+        "comment_id": "8",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "171",
+        "comment": "",
+        "title": "\u041f\u0430\u043f\u0430\u0448\u0438\u043d\u0430 \u0430\u0440\u043c\u0438\u044f",
+        "date": "Wed Jan 11 2017 14:12:07 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "193",
+        "comment": "",
+        "title": "Mothers`s Day",
+        "date": "Wed Jan 11 2017 14:13:26 GMT+0000 (GMT)",
+        "comment_id": "5",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "172",
+        "comment": "",
+        "title": "31",
+        "date": "Wed Jan 11 2017 14:15:25 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "2"
+    },
+    {
+        "video_id": "157",
+        "comment": "",
+        "title": "Black Mountain Side",
+        "date": "Wed Jan 11 2017 14:15:53 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "185",
+        "comment": "A solid character study that is difficult to enjoy but hard not to appreciate.",
+        "title": "Shame",
+        "date": "Sat Jan 14 2017 09:18:37 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "185",
+        "comment": "The ferocity of the performances and McQueen s formal relentlessness left me pulverized.",
+        "title": "Shame",
+        "date": "Sat Jan 14 2017 09:23:54 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "8"
+    },
+    {
+        "video_id": "159",
+        "comment": "Ross bit off more than he can chew... the story lolls and wallows in wartime violence and the rebellion, then rushes through the horrors and trauma of Reconstruction. ",
+        "title": "Free State of Jones",
+        "date": "Sat Jan 14 2017 09:31:46 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "159",
+        "comment": "McConaughey plays Newton Knight in one key, the key of righteous indignation, just what the story calls for.",
+        "title": "Free State of Jones",
+        "date": "Sat Jan 14 2017 09:32:40 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "159",
+        "comment": "Absolutely nothing but a history lesson, presented in what feel like deliberately uncinematic terms.",
+        "title": "Free State of Jones",
+        "date": "Sat Jan 14 2017 09:36:02 GMT+0000 (GMT)",
+        "comment_id": "2",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "159",
+        "comment": "A must for Civil War buffs, Free State of Jones is a ripping fictionalised drama about true events long hidden from history's spotlight.",
+        "title": "Free State of Jones",
+        "date": "Sat Jan 14 2017 10:08:04 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "deividas777@hotmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "201",
+        "comment": "A lump in the throat inspired by real-life heroism is all that this dour, monotonous drama has to offer.",
+        "title": "Alone in Berlin",
+        "date": "Mon Jan 16 2017 22:48:22 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    },
+    {
+        "video_id": "201",
+        "comment": "It t is a fine film worthy of your attention.",
+        "title": "Alone in Berlin",
+        "date": "Mon Jan 16 2017 22:50:37 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "201",
+        "comment": "This handsomely mounted and well-acted World War II drama lacks the narrative urgency to match its heartfelt sincerity.",
+        "title": "Alone in Berlin",
+        "date": "Mon Jan 16 2017 22:51:29 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "7"
+    },
+    {
+        "video_id": "203",
+        "comment": "The feel for the epic that once gave this directors films a pop grandeur is also gone Hes made a totally anonymous movie devoid of personality or interest",
+        "title": "Jack Reacher: Never Go Back",
+        "date": "Sun Jan 22 2017 19:51:49 GMT+0000 (GMT)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "4"
+    },
+    {
+        "video_id": "203",
+        "comment": "It would be a refreshing departure from the more bombastic set pieces of modern Hollywood if it werent all so lazily executed",
+        "title": "Jack Reacher: Never Go Back",
+        "date": "Sun Jan 22 2017 19:53:19 GMT+0000 (GMT)",
+        "comment_id": "1",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "3"
+    },
+    {
+        "video_id": "203",
+        "comment": "A fantastically convoluted overextended but watchable action thriller whose many dangling loose ends subplots and side characters are finally tied up with a showy flourish",
+        "title": "Jack Reacher: Never Go Back",
+        "date": "Sun Jan 22 2017 19:55:05 GMT+0000 (GMT)",
+        "comment_id": "3",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "5"
+    },
+    {
+        "video_id": "203",
+        "comment": "This bonkers but brilliant premise means this is one of the more preposterous action movies of the year Its also one of the most entertaining",
+        "title": "Jack Reacher: Never Go Back",
+        "date": "Sun Jan 22 2017 19:55:51 GMT+0000 (GMT)",
+        "comment_id": "6",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "6"
+    }
+]

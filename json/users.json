@@ -1,0 +1,110 @@
+{
+	"persons": [
+	   {
+		"person1": {
+			"Name": "Deividas",
+			"Surname": "Onaitis",
+			"Db": "09/08/1974",
+			"Address": [{
+				"No": 20,
+				"Street": "Barra Glass",
+				"City": "Tramore",
+				"County": "Waterford",
+				"Country": "Ireland",
+				"EirCode": "X91 A2H1",
+				"Prefix": 353
+			  }],
+			"Email": [
+					"deividas@deividasonaitis.com",
+					"deividas777@hotmail.com",
+					"deividas777@gmail.com"
+			        ],
+			"Phone": [{
+					"house": "051330353",
+					"mobile":"0894614610",
+					"mobile2":"",
+					"mobile3":""
+			     }],
+			"SocialAccounts":[
+			                    {
+			                       "facebook":"https://www.facebook.com/deividas.onaitis"		                      
+			                    },
+			                    {
+			                       "LinkedIn":"https://www.linkedin.com/in/deividas-onaitis-3aa74142"
+			                    }
+			                  ]
+
+		},
+	
+	"person2": {
+			"Name": "Otilija",
+			"Surname": "Onaitiene",
+			"Db": "30/10/1974",
+			"Address": [{
+				"No": 20,
+				"Street": "Barra Glass",
+				"City": "Tramore",
+				"County": "Waterford",
+				"Country": "Ireland",
+				"EirCode": "X91 A2H1",
+				"Prefix": 353
+			  }],
+			"Email": [
+					"otilija@tramorestainedglass.com",
+					"otilija4791@gmail.com"					
+			        ],
+			"Phone": [{
+					"house": "051330353",
+					"mobile":"0860735984",
+					"mobile2":"",
+					"mobile3":""
+			     }],
+			"SocialAccounts":[
+			                    {
+			                       "facebook":"https://www.facebook.com/otilija.onaitiene"
+			                    },
+			                    {
+			                       "LinkedIn":""
+			                    }
+			                  ]
+		   },
+		   "person3": {
+		   
+			"Name": "Dominykas",
+			"Surname": "Onaitis",
+			"Db": "23/04/1998",
+			"Address": [{
+				"No": 20,
+				"Street": "Barra Glass",
+				"City": "Tramore",
+				"County": "Waterford",
+				"Country": "Ireland",
+				"EirCode": "X91 A2H1",
+				"Prefix": 353
+			  }],
+			"Email": [
+					"otilija@tramorestainedglass.com",
+					"otilija4791@gmail.com"					
+			        ],
+			"Phone": [{
+					"house": "051330353",
+					"mobile":"0860735984",
+					"mobile2":"",
+					"mobile3":""
+			     }],
+			"SocialAccounts":[
+			                    {
+			                       "facebook":"https://www.facebook.com/otilija.onaitiene"
+			                    },
+			                    {
+			                       "LinkedIn":""
+			                    }
+			                  ]
+		}
+		   
+
+
+
+	}
+]
+}
