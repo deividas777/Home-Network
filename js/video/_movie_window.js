@@ -1,28 +1,28 @@
                             /**
 							 * Display Movie in Modal window
 							 */
-									  
+
 							     var movie_window = function(drive,movie,title,image,des,cat){
 
                                           var category = cat;
                                           var videoTitle = title;
                                           var tmp =[];
-                                          
+
 
 										  $('#myModal').html("");
-										  $('footer').remove();										  
+										  $('footer').remove();
 										  $('body').append($('<footer/>'));
-										  $('footer').append($('<div/>',{'class':'modal fade','id':'myModal','role':'dialog'}));	
-																			  
+										  $('footer').append($('<div/>',{'class':'modal fade','id':'myModal','role':'dialog'}));
+
 										  $('#myModal').append($('<div/>',{'class':'modal-dialog'}));
 										  $('.modal-dialog').append($('<div/>',{'class':'modal-content'}));
-										  $('.modal-content').append($('<div/>',{'class':'modal-header'}));					  
+										  $('.modal-content').append($('<div/>',{'class':'modal-header'}));
 										  $('.modal-header').append($('<button/>',{'class':'close','data-dismiss':'modal','aria-label':'Close'}));
 										  $('.close').append($('<span/>',{'aria-hidden':true,text:'X'}));
 										  $('.modal-header').append($('<h2/>',{'class':'modal-title',html:'<label class="label label-lg label-info">' + title + '<label/>','style':'font-size:1.7em;font-family: "Gill Sans Extrabold", Helvetica, sans-serif;'}));
 										  $('.modal-content').append($('<div/>',{'class':'modal-body'}));
 										  $('.modal-body').append($('<img/>',{'src':image,'class':'img-responsive','width':'250px','height':'280px','id':'poster-image'})).append('<br />');
-										  $('.modal-body').append($('<button/>',{'type':'button','class':'btn btn-primary',text:"About Movie",'data-container':'body','data-toggle':'popover','data-placement':'right','data-content':des})).append('<br><br />');												  
+										  $('.modal-body').append($('<button/>',{'type':'button','class':'btn btn-primary',text:"About Movie",'data-container':'body','data-toggle':'popover','data-placement':'right','data-content':des})).append('<br><br />');
 
                                      if(!drive){
 
@@ -119,24 +119,23 @@
                                         //Call Display info function
                                          displayInfo();
 
-                                           
-                                      
-                                          $('#similar-movies p').hover(function(e){
-												  e.preventDefault();
 
-												  var id = $(this).attr('id');
-												  var image = new Image(80, 60);
 
-												  for(var x in video){
-													if(video[x].title == tmp[id]){
-													   image.src = video[x].image;
-													   image.className = "img-responsive";
-													   image.alt = tmp[id];
-													   image.id = "similarMovies";
+                          $('#similar-movies p').hover(function(e){
+																  e.preventDefault();
 
-													}
-												  }
-                                                        $(this).html(image);
+																  var id = $(this).attr('id');
+																  var image = new Image(80, 60);
+
+																  for(var x in video){
+																		if(video[x].title == tmp[id]){
+																		   image.src = video[x].image;
+																		   image.className = "img-responsive";
+																		   image.alt = tmp[id];
+																		   image.id = "similarMovies";
+																		}
+															  }
+                                  $(this).html(image);
 
                                                  $('img').mouseenter(function(e){
 
@@ -146,7 +145,7 @@
                                                       for(var x in video){
                                                           if(video[x].title === title){
                                                              var watchMovie = video[x];
-                                                             $(this).attr({'data-tooltip':'toggle','title':watchMovie.des});                                                 
+                                                             $(this).attr({'data-tooltip':'toggle','title':watchMovie.des});
                                                                  break;
                                                           }
                                                       }
@@ -168,11 +167,11 @@
 										 * look to cahnge background() function
 										 */
 										    change_background_image('.modal-body',cat);
-										 
+
 										/*
 										 * Function toggles window
 										 */
-										    $('#myModal').modal("toggle"); 
+										    $('#myModal').modal("toggle");
 										/*
 										 * Function toggles popover
 										 */
@@ -184,22 +183,22 @@
 										  /*
 										   * Remove video player from window, stop downloading video from server
 										   */
-										    
+
 										    $('.modal-header button').click(function(event){
-										    	event.preventDefault();					    	
-										    	$('.player_modal video').remove();	
+										    	event.preventDefault();
+										    	$('.player_modal video').remove();
 										    	return;
 										    });
-										    										    
-									  }//end movie_window()	
+
+									  }//end movie_window()
 
 
 									  /**
 				     * Function changes background images dependant on category
 				     */
-							  
+
 					   var change_background_image = function(element,category){
-						   
+
 						   var tmp_coll = [];
 						   this.element = element;
 						   var backgrounds = [
@@ -224,19 +223,22 @@
 						                       {"cat":"Drama","image":"./images/backgrounds/drama3.jpeg"},
 						                       {"cat":"Drama","image":"./images/backgrounds/drama4.jpeg"},
 						                       {"cat":"Drama","image":"./images/backgrounds/drama5.jpeg"}
+																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIczVGZ1ZKWjBhUFk/preview"},
+																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIZ29QeHJSMlA2UE0/preview"},
+																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyILVlneGFJaXhWODA/preview"}
 						                      ];
-						   
+
 						   //$('#back').animate({opacity: 0}, 0).css({'background-image': 'url(http://vaughnroyko.com/jsfiddle/back.png)'}).animate({opacity: 1}, 2500);
-						   
-						   
+
+
 						   for(var x in backgrounds){
-							   if(backgrounds[x].cat == category){					  
+							   if(backgrounds[x].cat == category){
 								   tmp_coll.push(backgrounds[x]);
-								   var tmp = Math.floor(Math.random() * tmp_coll.length);
-								   
-								   $(element).css({'background-image': 'url("'+ tmp_coll[tmp].image +'")','background-repeat':'no-repeat','background-size':'cover','opacity':'0'}).animate({'opacity':'1'}, 2500);
-							   }
+									 var tmp = Math.floor(Math.random() * tmp_coll.length);
+									 $(element).css({'background-image': 'url("'+ tmp_coll[tmp].image +'")','background-repeat':'no-repeat','background-size':'cover','opacity':'0'}).animate({'opacity':'1'}, 2500);
+								  }
 						   }
+
 
 						   if(tmp == null){
 							   $(element).css({
@@ -246,5 +248,5 @@
 							              'background-position':'80% 50%',
 							              'opacity':'0'}).animate({'opacity':'1'}, 2500);
 						   }
-						   
+
 					   };

@@ -280,7 +280,7 @@
                      tvPrototype.prototype.des = 'none';
 
                  $.ajax({
-                    url: 'json/videos.json',
+                    url: 'https://api.myjson.com/bins/fxlbl',  //'json/videos.json' ==> json storage https://api.myjson.com/bins/fxlbl
                     dataType: 'json',
                     cache: false,
                     success: function(data){
@@ -457,9 +457,9 @@
                     videoPrototype.prototype.player = 'none';
 
 		 $.ajax({
-			url: 'json/videos.json',
+			url: 'json/videos.json',  //json/videos.json ==> https://api.myjson.com/bins/fxlbl
 			dataType: 'json',
-      cache: false,
+      cache: true,
 			success: function(data){
 
                     var str = "obj";

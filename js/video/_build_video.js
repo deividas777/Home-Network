@@ -22,11 +22,11 @@
 											}
 										}
 										video.push(new Object({'favourites':combained}));
-										console.log(video[video.length - 1]);
+										//console.log(video[video.length - 1]);
 
-										for(var t in video[video.length - 1]){
-											console.log(video[video.length - 1][t]);
-										}
+										// for(var t in video[video.length - 1]){
+										// 	console.log(video[video.length - 1][t]);
+										// }
 							};//end createCombainedCollection()
 
 				       createCombainedCollection();
@@ -49,41 +49,36 @@
 				//console.log(collection[collection.length -1].favourites);
 
 				//for(var g in collection){
-				var rt = 0;
-					for(var d in collection[collection.length - 1]){
-						//console.log(collection[collection.length - 1].favourites.length);
+				      /*
+							 *Compare string
+							 */
+				     var faClass = '';
+						 var color ='';
 
-						for(var z = 0; z < collection.length; z++){
+						//  var getTitle = function(arr){
+						// 		for(var k in arr){
+						// 			var title = $.trim(arr[k].title);
+						// 			title = $.sha1(title);
+						// 			for(var x in arr[arr.length - 1]){
+						// 				for(var z in arr[arr.length - 1][x]){
+						// 					var title2 = arr[arr.length - 1][x][z];
+						// 					if(title2.localeCompare(title) == 0){
+						// 						console.log(0);
+						// 						  faClass = 'fa fa-heartbeat fa-2x pull-right';
+						// 							color = 'color:red;';
+						// 					}else if(title2.localeCompare(title) == 1 || title2.localeCompare(title) == -1){
+						// 						console.log(1);
+						// 							faClass = 'fa fa-heart fa-2x pull-right';
+						// 							color = 'color:orange;';
+						// 					}
+						// 				}
+						// 			}
+						// 		}
+						// 	};//end getTitle
+						 //
+						// 	getTitle(collection);
 
-							var title = $.trim(collection[z].title);
-							title = $.sha1(title);
 
-
-							//console.log(collection[collection.length - 1].favourites[z]);
-
-							if(collection[collection.length - 1].favourites[z] === title){
-								rt += 1;
-								console.log(collection[collection.length - 1].favourites[z]);
-							}
-						}
-					}
-					console.log(rt);
-				//}
-					//if(collection[collection.length -1].favourites[g] === $.sha1(collection[x].title)){
-
-					//}
-				//}
-						for(var d in favourites){
-							if($.sha1(user_id) == favourites[d].user.toString()){
-								//console.log(favourites[d].loved);
-								var faClass = 'fa fa-heartbeat fa-2x pull-right';
-								var color = 'color:red;';
-								$('#fav').off();
-							}else{
-								var faClass = 'fa fa-heart fa-2x pull-right';
-								var color = 'color:black;';
-							}
-						}
 
 		    /**
 			 * Control number of videos display on main page max 12 on one page
@@ -182,6 +177,22 @@
           *Date and quality of video labels
           */
 
+					var title = collection[x].title;
+					title = $.sha1(title);
+          for(var a in collection[collection.length - 1]){
+						for(var b in collection[collection.length - 1][a]){
+							var title2 = $.trim(collection[collection.length - 1][a][b]);
+                if(title2.localeCompare(title) == 0){
+									console.log(title + '===' + title2);
+									faClass = 'fa fa-heartbeat fa-2x pull-right';
+									color = 'color:red;';
+								}else if(title2.localeCompare(title) === 1 || title2.localeCompare(title) === -1){
+									faClass = 'fa fa-heart fa-2x pull-right';
+									color = 'color:black;';
+								}
+
+						}
+					}
 
 
           $('#panel_'+x).append($('<div/>',{
@@ -194,6 +205,7 @@
                                                    'class':'label label-lg label-default pull-right',
                                                    'style':'margin:4px;',
                                                    text:`${collection[x].quality}`}));
+
           /*
            *Image
            */
