@@ -1,5 +1,8 @@
-var build_tvShows = function(){
 
+var state = false;
+
+var build_tvShows = function(){
+state = false;
 		 $('#video').html("");
 
 		 for(var x in tv_shows){
@@ -70,11 +73,13 @@ var build_tvShows = function(){
 
 				$('#panel-body-'+x).append($('<div/>',{
 																		 'id':'tv_shows_button',
+																		 'data-state':state,
 																		 'class':'btn btn-sm btn-info pull-right',
 																		 'data-series':tv_shows[x].season,
 																		 'data-title':tv_shows[x].title,
 																		 'data-count':tv_shows[x].videos.length,
-																		 'data-cat':tv_shows[x].cat,text:'Watch'}));
+																		 'data-cat':tv_shows[x].cat,
+																		 text:'Watch'}));
 
 		 }//end for(var x in tv_shows)
 
@@ -87,32 +92,38 @@ var build_tvShows = function(){
 							var x = parseInt($(this).attr('data-count'));
 							$(this).attr({'data-toggle':'tooltip','title':`Number of series: ${x}`});
 						},
+
 						mouseleave: function(){
 							$(this).removeAttr('data-toggle').removeAttr('title');
 						},
+
 						click: function(){
-							/*
-							 * Disable click function on button
-							 */
-							 $(this).off();
-						  /*
-						   * Get Variables
-						   */
-							var count = $(this).attr('data-count');
+
+				  /*
+				   * Get Variables
+				   */
+							const count = $(this).attr('data-count');
 						  parent = $(this).parent().attr('id');
 							var title = $(this).attr('data-title');
 							var season = $(this).attr('data-series');
 							var cat = $(this).attr('data-cat');
+							const dataState =  $(this).attr('data-state');
 
 
+					if(dataState === 'false'){
+						$(this).removeAttr('data-state');//.attr({'data-state':true});
+						state = true;
 						for(var z in tv_shows){
 							if(title == tv_shows[z].title && season == tv_shows[z].season){
+
 				                for(var x = 0; x < count;x++){
+
 				                     $('#'+parent).append('<br/>').append($('<div/>',{'class':'col-sm-3','id':'col-'+season+title.substring(0,5)+x}));
-				                      if(watched.getItem(tv_shows[z].videos[x]) == null){
+
+															if(watched.getItem(tv_shows[z].videos[x]) == null){
 				                          $('#col-'+season+title.substring(0,5)+x).append($('<label/>',{
 				                                                                            'class':'label label-info',
-				                                                                            'data-des':tv_shows[z].des,
+				                                                                            //'data-des':tv_shows[z].des,
 				                                                                            'data-image':tv_shows[z].image,
 				                                                                            'data-title':tv_shows[z].title,
 				                                                                            'data-cat':tv_shows[z].cat,
@@ -121,7 +132,7 @@ var build_tvShows = function(){
 				                      }else{
 				                          $('#col-'+season+title.substring(0,5)+x).append($('<label/>',{
 				                                                                            'class':'label label-success',
-				                                                                            'data-des':tv_shows[z].des,
+				                                                                            //'data-des':tv_shows[z].des,
 				                                                                            'data-image':tv_shows[z].image,
 				                                                                            'data-title':tv_shows[z].title,
 				                                                                            'data-cat':tv_shows[z].cat,
@@ -133,6 +144,10 @@ var build_tvShows = function(){
 				                }//end for
 						   }//end if(title == tv_shows[z].title && season == tv_shows[z].season
 						}//end for(var z in tv_shows)
+					}//end if()
+
+
+
 
 						/*
 						 * Click to view video in separate window, change label color series that were watched
@@ -163,7 +178,7 @@ var build_tvShows = function(){
 									 $(this).addClass('label label-warning',300);
 
 							 });//end $('#video label').click(function()
-					}//end click function()
+					}
 				});
 
 	       /*
