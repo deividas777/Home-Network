@@ -1,6 +1,41 @@
 {
 "albums":[
   {
+    "artist":"Fifty Shades Darker",
+    "collection":[{
+      "album_title":"Soundtrack",
+      "year":2016,
+      "image": "https://s3-eu-west-1.amazonaws.com/musicpop/Fifty+Shades+Darker%3A+Original+Motion+Picture+Soundtrack+2016/index.jpg",
+      "rating":4,
+      "number_tracks":19,
+      "des":"One of the most anticipated soundtracks of 2017 is finally here. We’re talking about the OST for “Fifty Shades Darker”, the second movie of the “Fifty Shades” saga which hits theaters worldwide today.",
+      "date_added":1480786517,
+      "path":"https://s3-eu-west-1.amazonaws.com/musicpop/Fifty+Shades+Darker%3A+Original+Motion+Picture+Soundtrack+2016/",
+      "genre":"Pop",
+      "tracks":[
+        "Birthday.mp3",
+        "Bom+Bidi+Bom.mp3",
+        "Code+Blue.mp3",
+        "Cruise.mp3",
+        "Empty+Pack+of+Cigarettes.mp3",
+        "Helium.mp3",
+        "I+Don_t+Wanna+Live+Forever.m4a",
+        "I+Need+a+Good+One.mp3",
+        "Lies+in+the+Dark.mp3",
+        "Making+It+Real.mp3",
+        "No+Running+from+Me.mp3",
+        "Not+Afraid+Anymore.mp3",
+        "On+His+Knees.mp3",
+        "One+Woman+Man.mp3",
+        "Pray.mp3",
+        "The+Scientist.mp3",
+        "They+Can_t+Take+That+Away+from+Me.mp3",
+        "What+Is+Love.mp3",
+        "What+Would+It+Take.mp3"
+      ]
+    }]
+  },
+  {
     "artist":"George Michael",
     "collection":[{
       "album_title":"George Michael Greatest Hits CD 1 ",
