@@ -409,10 +409,11 @@
                                      str.genre = data.albums[x].collection[z].genre;
                                      str.tracks = data.albums[x].collection[z].tracks;
                                      albums_collection.push(str);
+                                  
                                  }
                                }
                            albums_collection.reverse();
-                           //console.log(albums_collection);
+                           console.log(albums_collection);
                        },
                        statusCode: {
                           404: function(){
