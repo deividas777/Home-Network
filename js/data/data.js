@@ -396,21 +396,22 @@
                        success: function(data){
 
                            for(var x in data.albums){
-                             var str = new albumsPrototype();
-                                 for(var z in data.albums[x].collection){
 
-                                     str.artist = data.albums[x].artist;
-                                     str.album_title = data.albums[x].collection[z].album_title.replace(/[0-9]/g, '');
-                                     str.year = data.albums[x].collection[z].year;
-                                     str.image = data.albums[x].collection[z].image;
-                                     str.rating = data.albums[x].collection[z].rating;
-                                     str.number_tracks = data.albums[x].collection[z].number_tracks;
-                                     str.path = data.albums[x].collection[z].path;
-                                     str.genre = data.albums[x].collection[z].genre;
-                                     str.tracks = data.albums[x].collection[z].tracks;
-                                     albums_collection.push(str);
-                                  
-                                 }
+                             var str = new albumsPrototype();
+                             str.artist = data.albums[x].artist;
+
+                               for(z in data.albums[x].collection){
+                                      str.album_title = data.albums[x].collection[z].album_title.replace(/[0-9]/g, '');
+                                      str.year = data.albums[x].collection[z].year;
+                                      str.image = data.albums[x].collection[z].image;
+                                      str.rating = data.albums[x].collection[z].rating;
+                                      str.number_tracks = data.albums[x].collection[z].number_tracks;
+                                      str.path = data.albums[x].collection[z].path;
+                                      str.genre = data.albums[x].collection[z].genre;
+                                      str.tracks = data.albums[x].collection[z].tracks;
+                               }
+                                 albums_collection.push(str);
+
                                }
                            albums_collection.reverse();
                            console.log(albums_collection);

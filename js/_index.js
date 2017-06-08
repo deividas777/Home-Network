@@ -291,7 +291,7 @@ $(document).ready(function(){
 				/*
 				 * Display tracks when user's mouse enters label
 				 */
-					$(this).attr({'data-toggle':'tooltip','title':tracks});
+					$(this).attr({'data-toggle':'tooltip','title':tracks.slice(0,-4)});
 
 				}, function(){
 					$(this).removeAttr('data-toggle').removeAttr('title');
@@ -425,12 +425,13 @@ $(document).ready(function(){
 						$('#panel-albums-'+i).append($('<div/>',{'class':'panel-heading panel-primary',html:'<h6><span class="glyphicon glyphicon-music"> ' + albums_collection[uniqueNames[i]].artist + '</span></h6>'}));
 						$('#panel-albums-'+i).append($('<div/>',{'class':'panel-body','id':'panel-body-album-'+i,html:'<label class="label label-lg label-default">'+albums_collection[uniqueNames[i]].album_title+'</label><br><br>'}));
 
-						    var image = new Image(200,200);
+						  var image = new Image(200,200);
 							image.src = albums_collection[uniqueNames[i]].image;
 							image.alt = albums_collection[uniqueNames[i]].artist;
 							image.className = "image-responsive";
 
-						$(image).attr({'data-toggle':'tooltip','title':albums_collection[uniqueNames[i]].artist + ' Music genre: ' +albums_collection[uniqueNames[i]].genre.toUpperCase()});
+						$(image).attr({'data-toggle':'tooltip',
+                           'title':albums_collection[uniqueNames[i]].artist + ' Music genre: ' +albums_collection[uniqueNames[i]].genre.toUpperCase()});
 						$('#panel-body-album-'+i).append(image).append('<br><br>');
 				/*
 				 * Print Stars --> Rating from collection
@@ -439,14 +440,21 @@ $(document).ready(function(){
 						$('#panel-body-album-'+i).append($('<span/>',{'class':'glyphicon glyphicon-star-empty','style':'color:gold;heigth:20px;'}));
 					}//end print stars
 
-					    $('#panel-body-album-'+i).append($('<div/>',{'class':'label label-lg label-danger pull-right','id':'album-tracks','data-artist':albums_collection[uniqueNames[i]].artist,'data-album':albums_collection[uniqueNames[i]].album_title,html:'Tracks: <span class="badge">' + albums_collection[uniqueNames[i]].number_tracks + '</badge>'}));
+					    $('#panel-body-album-'+i).append($('<div/>',{'class':'label label-lg label-danger pull-right',
+                                                            'id':'album-tracks',
+                                                            'data-artist':albums_collection[uniqueNames[i]].artist,
+                                                            'data-album':albums_collection[uniqueNames[i]].album_title,
+                                                            html:'Tracks: <span class="badge">' + albums_collection[uniqueNames[i]].number_tracks + '</badge>'}));
 
                   /**
                    * Check if session exist
                    */
 					if(session){
 						$('#panel-albums-'+i).append($('<div/>',{'class':'panel-footer','id':'panel-footer-albums-'+i}));
-						$('#panel-footer-albums-'+i).append($('<button/>',{'class':'btn btn-warning','id':'artist_albums',text:'Play','data-album':albums_collection[uniqueNames[i]].album_title}));
+						$('#panel-footer-albums-'+i).append($('<button/>',{'class':'btn btn-warning',
+                                                               'id':'artist_albums',
+                                                               text:'Play',
+                                                               'data-album':albums_collection[uniqueNames[i]].album_title}));
 					}
 
 					}//end of loop
@@ -505,8 +513,14 @@ $(document).ready(function(){
 				        		  for(var y in albums_collection[x].tracks){
 
 				        			var title = albums_collection[x].tracks[y].length;
-				        			var trackName = albums_collection[x].tracks[y].replace(/_|-/g, " ");
-				        		    collection.push(new Object({"mp3":albums_collection[x].path+albums_collection[x].tracks[y],"oga":albums_collection[x].path+albums_collection[x].tracks[y],"title":trackName,"artist":albums_collection[x].artist,"rating":albums_collection[x].rating,"cover":albums_collection[x].image}));
+				        			var trackName = albums_collection[x].tracks[y].replace(/[^0-9]/|/\D/|/_|-/g, " ").slice(0,-4);
+
+				        		  collection.push(new Object({"mp3":albums_collection[x].path+albums_collection[x].tracks[y],
+                                                  "oga":albums_collection[x].path+albums_collection[x].tracks[y],
+                                                  "title":trackName,
+                                                  "artist":albums_collection[x].artist,
+                                                  "rating":albums_collection[x].rating,
+                                                  "cover":albums_collection[x].image}));
 				        		  }
 				        		}else if(!albums_collection[x].album_title == album){
 				        			alert("Not Found " + album);
