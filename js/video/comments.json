@@ -754,5 +754,14 @@
         "comment_id": "6",
         "user_id": "test6@gmail.com",
         "movie_rating": "6"
+    },
+    {
+        "video_id": "18",
+        "comment": "Strange movie",
+        "title": "Joy",
+        "date": "Tue Jun 13 2017 20:08:04 GMT+0100 (IST)",
+        "comment_id": "0",
+        "user_id": "test6@gmail.com",
+        "movie_rating": "3"
     }
 ]

@@ -79,13 +79,19 @@
 
                           click: function(){
                                  var confirm = $(this).attr('data-info');
-                                 if(confirm === "stay"){
+                                 console.log(confirm);
+
+                                 switch (true) {
+                                    case confirm === "stay":
                                     loginForm();
                                     sessionStorage.setItem('confirm',true);
                                     clearInterval();
-                                 }else{
-                                    sessionStorage.setItem('confirm',false);
+                                     break;
+                                   default:
+                                   sessionStorage.setItem('confirm',false);
+
                                  }
+                                
                           }
                        });
                     }else{
@@ -171,7 +177,7 @@
 
                                     $('.modal-body').append($('<form/>',{'id':'user-form'}));
                                     $('#user-form').append($('<div/>',{'class':'form-group'}));
-                                    
+
                                     var data = [
                                                 {
                                                    name:"email",
@@ -318,7 +324,7 @@
                                        counter++;
                                        var userEmail = $('#email').val();
                                        var userPass = $('#password').val();
-                                   
+
 
                                 switch(true){
 
@@ -332,10 +338,10 @@
                                   break;
 
                                   case(validEmail(userEmail) == true && validPassword(userPass) == true):
-                                   
+
                                    userEmail = userEmail;
-                                   userPass = userPass; 
-                                   var login = 'login';     
+                                   userPass = userPass;
+                                   var login = 'login';
 
 
                                         $.post(
@@ -398,7 +404,7 @@
                                        return;
                                   break;
 
-                                 
+
                                   default:
                                        sessionStorage.clear();
                                        location.replace("http://www.w3schools.com");
@@ -408,4 +414,3 @@
                             			$('#myModal').modal("toggle");
 
       };//end Login Form ()
-
