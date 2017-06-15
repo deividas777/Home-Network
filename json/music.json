@@ -1,6 +1,98 @@
 {
 "albums":[
   {
+    "artist":"Nelly Furtado",
+    "collection":[{
+      "album_title":"The Ride",
+      "year":2017,
+      "image": "https://goo.gl/Z9oQb1",
+      "rating":4,
+      "number_tracks":12,
+      "des":"The Ride is the sixth studio album by Canadian singer Nelly Furtado. The album was released on 31 March 2017 by Furtado's own record label, Nelstar Music.",
+      "date_added":1497506548,
+      "path":"https://s3-eu-west-1.amazonaws.com/musicpop/Nelly+Furtado/The+Ride/",
+      "genre":"R&B",
+      "tracks":[
+        "Carnival Games.mp3",
+        "Cold Hard Truth.mp3",
+        "Flatline.mp3",
+        "Live.mp3",
+        "Magic.mp3",
+        "Palaces.mp3",
+        "Paris Sun.mp3",
+        "Phoenix.mp3",
+        "Pipe Dreams.mp3",
+        "Right Road.mp3",
+        "Sticks and Stones.mp3",
+        "Tap Dancing.mp3"
+      ]
+    }]
+  },
+  {
+    "artist":"LeAnn Rimes",
+    "collection":[{
+      "album_title":"Remnants",
+      "year":2016,
+      "image": "https://goo.gl/010GXN",
+      "rating":3,
+      "number_tracks":17,
+      "des":"Remnants is the sixteenth studio album by American country and pop singer-songwriter LeAnn Rimes. It was released in the United Kingdom and Europe on October 28, 2016. The album was released in the United States on February 3, 2017.",
+      "date_added":1497506548,
+      "path":"https://s3-eu-west-1.amazonaws.com/musicpop/LeAnn+Rimes/Remnants/",
+      "genre":"Pop",
+      "tracks":[
+        "Dang Dang.mp3",
+        "Do It Wrong With Me.mp3",
+        "Give Me Something (I Can't Give Myself).mp3",
+        "How to Kiss a Boy (The Live Church Session).mp3",
+        "How to Kiss a Boy.mp3",
+        "Humbled.mp3",
+        "I Couldn't Do That to Me.mp3",
+        "Learning Your Language.mp3",
+        "Long Live Love.mp3",
+        "Love Line (The Live Church Session).mp3",
+        "Love Line.mp3",
+        "Love is Love is Love.mp3",
+        "Mother.mp3",
+        "Outrageous Love.mp3",
+        "Remnants.mp3",
+        "The Story (The Live Church Session).mp3",
+        "The Story.mp3"
+      ]
+    }]
+  },
+  {
+    "artist":"Katy Perry",
+    "collection":[{
+      "album_title":"Witness",
+      "year":2016,
+      "image": "https://goo.gl/p7bstH",
+      "rating":3,
+      "number_tracks":15,
+      "des":"This is the 32-year-old singer’s fourth major studio album and it features such songs as Chained to the Rhythm, Bon Appetit, and Swish Swish.",
+      "date_added":1497506548,
+      "path":"https://s3-eu-west-1.amazonaws.com/musicpop/Katy+Perry/Witness/",
+      "genre":"Pop",
+      "tracks":[
+        "Bigger Than Me.mp3",
+        "Bon Appetit.mp3",
+        "Chained To The Rhythm.mp3",
+        "Deja Vu.mp3",
+        "Hey Hey Hey.mp3",
+        "Into Me You See.mp3",
+        "Mind Maze.mp3",
+        "Miss You More.mp3",
+        "Pendulum.mp3",
+        "Power.mp3",
+        "Roulette.mp3",
+        "Save As Draft.mp3",
+        "Swish Swish.mp3",
+        "Tsunami.mp3",
+        "Witness.mp3"
+      ]
+    }]
+  },
+  {
     "artist":"Ed Sheeran",
     "collection":[{
       "album_title":"Divide",
