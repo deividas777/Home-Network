@@ -304,6 +304,7 @@
                                 tv_shows.push(str);
                           }
                         }
+                        //console.log(tv_shows);
                     },
                     statusCode: {
                         404: function(){
@@ -397,10 +398,13 @@
 
                            for(var x in data.albums){
 
-                             var str = new albumsPrototype();
-                             str.artist = data.albums[x].artist;
+                              var t = data.albums[x].collection.length;
+                              //console.log(t);
 
-                               for(z in data.albums[x].collection){
+                               for(var z = 0; z < t; z++){
+
+                                      var str = new albumsPrototype();
+                                      str.artist = data.albums[x].artist;
                                       str.album_title = data.albums[x].collection[z].album_title.replace(/[0-9]/g, '');
                                       str.year = data.albums[x].collection[z].year;
                                       str.image = data.albums[x].collection[z].image;
@@ -409,9 +413,10 @@
                                       str.path = data.albums[x].collection[z].path;
                                       str.genre = data.albums[x].collection[z].genre;
                                       str.tracks = data.albums[x].collection[z].tracks;
-                               }
-                                 albums_collection.push(str);
 
+                               }
+
+                                  albums_collection.push(str);
                                }
                            albums_collection.reverse();
                            //console.log(albums_collection);
