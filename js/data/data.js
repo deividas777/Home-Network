@@ -389,6 +389,8 @@
           albumsPrototype.prototype.genre = '';
           albumsPrototype.prototype.tracks = '';
 
+          //var str = new albumsPrototype();
+
 
                 $.ajax({
                        url:'json/music.json',
@@ -399,11 +401,12 @@
                            for(var x in data.albums){
 
                               var t = data.albums[x].collection.length;
-                              //console.log(t);
+                              var str = new albumsPrototype();
+                              console.log(t);
 
                                for(var z = 0; z < t; z++){
 
-                                      var str = new albumsPrototype();
+                                      
                                       str.artist = data.albums[x].artist;
                                       str.album_title = data.albums[x].collection[z].album_title.replace(/[0-9]/g, '');
                                       str.year = data.albums[x].collection[z].year;
@@ -418,8 +421,8 @@
 
                                   albums_collection.push(str);
                                }
-                           albums_collection.reverse();
-                           //console.log(albums_collection);
+                           //albums_collection.reverse();
+                           console.log(albums_collection);
                        },
                        statusCode: {
                           404: function(){
