@@ -3,6 +3,8 @@
       confirmation = sessionStorage.getItem('confirm');
       session = sessionStorage.getItem('session');
       user_id = null;
+      var userEmail = '';
+      var userPass = '';
 
 
       var counter = 0;
@@ -91,7 +93,7 @@
                                    sessionStorage.setItem('confirm',false);
 
                                  }
-                                
+
                           }
                        });
                     }else{
@@ -154,6 +156,93 @@
                   };
 
 
+              /*
+               *Voice Recorder
+               *
+               */
+
+
+
+               var voice = function(){
+
+                  $('#myModal').html("");
+                                    $('footer').remove();
+                                    $('body').append($('<footer/>'));
+                                    $('footer').append($('<div/>',{'class':'modal fade','id':'myModal','role':'dialog'}));
+
+                                    $('#myModal').append($('<div/>',{'class':'modal-dialog'}));
+                                    $('.modal-dialog').append($('<div/>',{'class':'modal-content'}));
+                                    $('.modal-content').append($('<div/>',{'class':'modal-header'}));
+                                    $('.modal-header').append($('<button/>',{'class':'close','data-dismiss':'modal','aria-label':'Close'}));
+                                    $('.close').append($('<span/>',{'aria-hidden':true,text:'X'}));
+                                    $('.modal-header').append($('<h2/>',{'class':'modal-title',html:'<label class="label label-lg label-info">' + "Phrase" + '<label/>','style':'font-size:1.7em;font-family: "Gill Sans Extrabold", Helvetica, sans-serif;'}));
+                                    $('.modal-content').append($('<div/>',{'class':'modal-body'}));
+
+                                    $('.modal-body').append($('<form/>',{'id':'user-form'}));
+                                    $('#user-form').append($('<div/>',{'class':'form-group'}));
+                                    $('.form-group').append($('<label/>',{'id':'label-voice','type':'text','for':'voice',text:'voice'}));
+                                    $('.form-group').append($('<input/>',{'type':'text','class':'form-control','id':'voice','placeholder':'voice','name':'voice'}));
+                                    $('.form-group').append($('<button/>',{'class':'fa fa-microphone','id':'microphone'}));
+                                    $('.form-group').append($('<button/>',{'class':'btn btn-primary btn-sm pull-right','id':'confirm-phrase',text:'confirm'}));
+
+                                    //<i class="fa fa-plus-square" aria-hidden="true"></i>
+
+                                    $('#myModal').modal("toggle");
+
+                                    $('#microphone').click(function(e){
+                                          e.preventDefault();
+                                          startConverting();
+                                    });
+
+               };//end voice
+
+               var r = '';
+               var finalTranscripts = '';
+               var interimTranscripts = '';
+
+
+                var startConverting = function () {
+
+                        r = document.getElementById('voice');
+
+                            if('webkitSpeechRecognition' in window){
+                              var speechRecognizer = new webkitSpeechRecognition();
+                              speechRecognizer.continuous = true;
+                              speechRecognizer.interimResults = true;
+                              speechRecognizer.lang = 'en-EN';
+                              speechRecognizer.start();
+
+                              //var finalTranscripts = '';
+
+                              speechRecognizer.onresult = function(event){
+                                //var interimTranscripts = '';
+                                for(var i = event.resultIndex; i < event.results.length; i++){
+                                  var transcript = event.results[i][0].transcript;
+                                  transcript.replace("\n", "<br>");
+                                  if(event.results[i].isFinal){
+                                    finalTranscripts += transcript;
+                                  }else{
+                                    interimTranscripts += transcript;
+                                  }
+                                }
+
+
+                                // alert(finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>');
+                                //r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+                                r = finalTranscripts;// + '<span style="color:#999">' + interimTranscripts + '</span>';
+                                $('#voice').val(r);
+                              };
+                              speechRecognizer.onerror = function (event) {
+                              };
+                            }else{
+                              r.innerHTML = 'Your browser is not supported. If google chrome, please upgrade!';
+                            }
+
+                        };//end startConverting
+
+
+
+
                /*
                 *Registration Form
                 *
@@ -186,13 +275,23 @@
                                                 {
                                                    name:"password",
                                                    type:"password"
-                                                }];
+                                                }
+
+                                                ];
 
                                     for(var z in data){
                                        if(data[z].name !== "password"){
                                          $('.form-group').append($('<label/>',{'id':'label-'+data[z].name,'type':data[z].type,'for':data[z].name,text:data[z].name.toUpperCase()}));
                                          $('.form-group').append($('<input/>',{'type':data[z].type,'class':'form-control','id':data[z].name,'placeholder':data[z].name.toUpperCase(),'name':data[z].name}));
-                                       }else{
+
+                                      // }else if(data[z].name == "voice"){
+                                      //    $('.form-group').append($('<label/>',{'id':'label-'+data[z].name,'type':data[z].type,'for':data[z].name,text:data[z].name.toUpperCase()}));
+                                      //    $('.form-group').append($('<input/>',{'class':'voiceR','type':data[z].type,'class':'form-control','id':data[z].name,'placeholder':data[z].name.toUpperCase(),'name':data[z].name}));
+                                      //    $('.voiceR').append($('<i/>'),{class:'glyphicon glyphicon-volume-up','id':'voiceRecorder'});
+                                      }
+
+
+                                       else{
                                          var count = 0;
                                          while(count < 1){
                                            count++;
@@ -203,24 +302,38 @@
                                                $('.form-group').append($('<input/>',{'type':data[z].type,'class':'form-control','id':'repeat','placeholder':data[z].name.toUpperCase(),'name':'REPEAT' + data[z].name}));
                                            }
                                          }
-                                                                                                }
+                                        }
 
                                     }
 
                                      $('.modal-content').append($('<div/>',{'class':'modal-footer'}));
                                      $('.modal-footer').append($('<button/>',{'class':'btn btn-md btn-primary pull-right','id':'submitREGISTRATION',text:'Register'}));
 
+
                             $('#submitREGISTRATION').click(function(e){
 
                                      var emailUser = $('#email').val();
                                      var passwordUser = $('#password').val();
                                      var repeatPassword = $('#repeat').val();
+                                     var phrase = $('#voice').val();
 
-                                     if(emailUser && passwordUser === repeatPassword){
+                                  //Execute Voice Function
+                                     voice();
+
+
+                                $('#confirm-phrase').click(function(e){
+
+                                      e.preventDefault();
+
+                                      phrase = $('#voice').val();
+                                      alert(emailUser +' : '+ repeatPassword + ' : '+ passwordUser+' : '+ phrase);
+
+
+                                     if(emailUser && passwordUser === repeatPassword && phrase){
                                          var login = "login";
                                      }else{
                                           $('#label-repeat').text('Passwords do not match').css({'color':'red'});
-                                         return;
+                                          return;
                                      }
 
                                                  if(validEmail(emailUser)  == true){
@@ -232,7 +345,7 @@
                                                  }
 
                                                  if(validPassword(passwordUser) == true){
-                                                   passwordUser = passwordUser;
+                                                   passwordUser = passwordUser + phrase;
                                                  }else{
                                                    passwordUser = '';
                                                    $('#label-password').text('Wrong Password').css({'color':'red'});
@@ -268,7 +381,8 @@
 
                                  e.preventDefault();
 
-                            });
+                              });//end #confirm-phrase
+                            });//end #submitREGISTRATION
 
                                     $('#myModal').modal("toggle");
 
@@ -280,6 +394,8 @@
                *Login form function
                *
                */
+
+
 
                var loginForm = function(){
 
@@ -294,9 +410,9 @@
                             			$('.modal-header').append($('<button/>',{'class':'close','data-dismiss':'modal','aria-label':'Close'}));
                             			$('.close').append($('<span/>',{'aria-hidden':true,text:'X'}));
 
-                                            $('.close').click(function(e){
-                                                sessionStorage.clear();
-                                            });
+                                            // $('.close').click(function(e){
+                                            //     sessionStorage.clear();
+                                            // });
 
                             			$('.modal-header').append($('<h2/>',{'class':'modal-title',html:'<label class="label label-lg label-danger">' + "Warning" + '<label/>','style':'font-size:1.7em;font-family: "Gill Sans Extrabold", Helvetica, sans-serif;'}));
                             			$('.modal-content').append($('<div/>',{'class':'modal-body'}));
@@ -314,21 +430,35 @@
                                         $('.modal-footer').append($('<button/>',{'class':'btn btn-md btn-primary pull-right','id':'submit',text:'Submit'}));
                                         $('.modal-footer').append($('<button/>',{'class':'btn btn-md btn-primary pull-left','id':'registration',text:'Registration'}));
 
-                               $('#registration').click(function(){
+                       $('#registration').click(function(){
+                             registrationForm();
+                       });
 
-                                     registrationForm();
-                               });
+                       $('#submit').click(function(e){
 
-                               $('#submit').click(function(){
 
-                                       counter++;
-                                       var userEmail = $('#email').val();
-                                       var userPass = $('#password').val();
+                               counter++;
+                               userEmail = $('#email').val();
+                               userPass = $('#password').val();
+                               var phrase = $('#voice').val();
+                               alert(userEmail +' : '+ userPass);
+
+
+                               //Execute Voice Function
+                                voice();
+
+
+                         $('#confirm-phrase').click(function(e){
+
+
+                                phrase = $('#voice').val();
+
+                                alert(userEmail +' : '+ userPass + ' : '+ phrase);
 
 
                                 switch(true){
 
-                                  case(counter > 2):
+                                  case(counter > 3):
                                      sessionStorage.clear();
                                      location.replace("http://google.com");
                                   break;
@@ -340,7 +470,7 @@
                                   case(validEmail(userEmail) == true && validPassword(userPass) == true):
 
                                    userEmail = userEmail;
-                                   userPass = userPass;
+                                   userPass = userPass + phrase;
                                    var login = 'login';
 
 
@@ -397,20 +527,22 @@
 
                                    break;
 
-                                  case(validEmail(userEmail) == false || validPassword(userPass) == false):
-                                       var userEmail = '';
-                                       var userPass = '';
-                                       alert('Check Password or Email Format');
-                                       return;
-                                  break;
+                                  // case(validEmail(userEmail) == false || validPassword(userPass) == false):
+                                  //      var userEmail = '';
+                                  //      var userPass = '';
+                                  //      alert('Check Password or Email Format');
+                                  //      return;
+                                  // break;
 
 
                                   default:
                                        sessionStorage.clear();
                                        location.replace("http://www.w3schools.com");
                                 }
-
-                 });
+                                e.preventDefault();
+                      });
+                             e.preventDefault();
+                 });//end Submit
                             			$('#myModal').modal("toggle");
 
       };//end Login Form ()
