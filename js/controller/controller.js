@@ -30,7 +30,7 @@
               break;
 
               case '/video.html':
-                history.replaceState('/video.html',null, '/video');
+                history.replaceState({},null, '/video');
               break;
 
               case '/music.html':
@@ -53,7 +53,3 @@
                break;
 
               }
-
-
-
-

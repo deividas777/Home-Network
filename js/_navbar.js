@@ -1,30 +1,30 @@
 
-$(document).ready(function(){	
-	
+$(document).ready(function(){
+
 
 	$('body').append($('<div/>',{'class':'navbar-wrapper'}));
-	
+
 	$('.navbar-wrapper').append($('<div/>',{'class':'container','id':'navbar-wrapper'}));
 	$('#navbar-wrapper').append($('<nav/>',{'class':'navbar navbar-inverse navbar-fixed-top', 'role':'navigation'}));
 	$('nav').append($('<div/>', {'class':'container'}));
 	$('.container').append($('<div/>',{'class':'navbar-header','id':'navbar-header'}));
 	$('#navbar-header').append($('<a/>',{'class':'navbar-brand','href':'#',html:'<img src="./images/icons/network.png" id="network-icon" data-toggle="tooltip" title="Home Network" class="img-responsive" width="35" height="35"/>'}));
-	
+
 	$('.navbar-header').append($('<button/>',{'id':'nav-button','type':'button','class':'navbar-toggle collapsed','data-toggle':'collapse','data-target':'#navbar','aria-expand':'false','aria-controls':'navbar'}));
 	$('#nav-button').append($('<span/>',{'class':'sr-only'}));
 	$('#nav-button').append($('<span/>',{'class':'icon-bar'}));
 	$('#nav-button').append($('<span/>',{'class':'icon-bar'}));
 	$('#nav-button').append($('<span/>',{'class':'icon-bar'}));
 	$('#nav-button').append($('<span/>',{'class':'icon-bar'}));
-	
+
 	$('.container').append($('<div/>',{'id':'navbar','class':'collapse navbar-collapse'}));
 	$('#navbar').append($('<ul/>',{'class':'nav navbar-nav'}));
-	
+
 	/**
 	 * Rotate icon (home network)
 	 */
 		image = $('.navbar-brand img ').attr('id');
-		
+
 		$('#'+image).hover(function(){
 	        $(this).css('transform','rotate(360deg)');
 	        setTimeout(function () {
@@ -34,8 +34,8 @@ $(document).ready(function(){
 	            }.bind(this), 10);
 	        }.bind($(this)), 3000);
 	    });
-		
-		
+
+
 
 	var data = {"nav":[
 	                   {
@@ -70,8 +70,8 @@ $(document).ready(function(){
 	                   },
 	                   {
 	                      "name":"Logout",
-                          "href":"/",
-                          "icon":"fa fa-sign-out fa-lg"
+                        "href":"/",
+                        "icon":"fa fa-sign-out fa-lg"
 	                   }
 	                  ]};
 
@@ -97,9 +97,9 @@ $(document).ready(function(){
 	//CSS
 	  $('.navbar-wrapper').css({'margin':'5 0 20 0','max-width':'95%'});
 	  $('.navbar').css({'max-width':'95%','margin':'0.2% 2.5% 2% 2.5%','border-radius':'5px','padding':'auto'});
-		
-		
-	
+
+
+
    //CSS hover method and click method
 
            $("#navbar li div").bind({
@@ -133,5 +133,5 @@ $(document).ready(function(){
            });
 
 
-	
+
 	});

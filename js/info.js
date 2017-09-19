@@ -326,7 +326,7 @@
                                       e.preventDefault();
 
                                       phrase = $('#voice').val();
-                                      alert(emailUser +' : '+ repeatPassword + ' : '+ passwordUser+' : '+ phrase);
+                                      //alert(emailUser +' : '+ repeatPassword + ' : '+ passwordUser+' : '+ phrase);
 
 
                                      if(emailUser && passwordUser === repeatPassword && phrase){

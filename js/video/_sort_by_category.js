@@ -456,8 +456,8 @@
 
 							  event.preventDefault();
 
-                                var $btn = $(this).button('loading');
-							    var drive = $(this).attr('data-drive');
+                var $btn = $(this).button('loading');
+							  var drive = $(this).attr('data-drive');
 								var video = $(this).attr('data-src');
 								var title = $(this).attr('data-title');
 								var image = $(this).attr('data-image');
@@ -484,9 +484,9 @@
               *Pagination container
               */
 
-                  $('#video').append($('<div/>',{'class':'container-fluid','id':'pagination-container'}));
-                  $('#pagination-container').append($('<div/>',{'class':'row','id':'pagination-row'}));
-                  $('#pagination-row').append($('<div/>',{'class':'col-lg-12 col-md-12 col-sm-12 col-xs-12','id':'pagination-col'}));
+          $('#video').append($('<div/>',{'class':'container-fluid','id':'pagination-container'}));
+          $('#pagination-container').append($('<div/>',{'class':'row','id':'pagination-row'}));
+          $('#pagination-row').append($('<div/>',{'class':'col-lg-12 col-md-12 col-sm-12 col-xs-12','id':'pagination-col'}));
 				  $('#pagination-col').append($('<ul/>',{'class':'pagination','style':'position:fixed; margin-left:32%;'}));
 
 						  var domWidth = $('#video').width();
@@ -494,7 +494,7 @@
 						  var domHeight = $('#video').height();
 						  domHeight = Math.round(domHeight / 100);
 
-                          var links = Math.floor(movieCategory.length / 12);
+              var links = Math.floor(movieCategory.length / 12);
 
                       if(links >= 1){
                              for(var y = 1;y < links + 1;y++){
@@ -550,19 +550,19 @@
 								           sort_movies_by_category(cat,video);
 								       break;
 
-                                       case(id == 0):
-                                         return;
-                                       break;
+                       case(id == 0):
+                         return;
+                       break;
 
-                                       case(id >= 1):
-                                        build_sort_window(movieCategory.splice(cut - 12, cut));
-                                       break;
+                       case(id >= 1):
+                        build_sort_window(movieCategory.splice(cut - 12, cut));
+                       break;
 
 
-                                       default:
-                                        break;
+                       default:
+                        break;
 
-								   }
+								   }//end switch
 							  });//end $('.pagination-li')
 
                       $('.pagination').css({'position':'relative','bottom':domHeight+'%','left':domWidth+'%','width':(domWidth + 400)+'px'});

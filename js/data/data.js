@@ -88,6 +88,13 @@
      */
         var nav = [
                 {
+                  'class':'college',
+                  'title':'College',
+                  'cat':'College',
+                  'color':'black',
+                  'fa':'fa fa-graduation-cap fa-2x'
+                },
+                {
                   'class':'magazines',
                   'title':'Books ',
                   'cat':'Magazine',
@@ -406,7 +413,7 @@
 
                                for(var z = 0; z < t; z++){
 
-                                      
+
                                       str.artist = data.albums[x].artist;
                                       str.album_title = data.albums[x].collection[z].album_title.replace(/[0-9]/g, '');
                                       str.year = data.albums[x].collection[z].year;

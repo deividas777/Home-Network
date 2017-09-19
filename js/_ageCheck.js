@@ -1,4 +1,5 @@
-              /**
+
+				/**
 			   * Age verification modal
 			   */
 
@@ -36,7 +37,7 @@
                                   var age_18 = sessionStorage.getItem('age');
                                   var path = window.location.pathname;
 					              console.log(path);
-					             
+
 
 
                             if(age_18 == null){
@@ -66,10 +67,10 @@
                                      	default:
                                      	 break;
                                      }
-                                                                                 
+
                                   }
 
-                                  
+
                             }else if(age_18 == 'false'){
                                 return;
                             }
