@@ -1,6 +1,17 @@
 {
    "gallery":[
              {
+               "name":"Summer 2017",
+               "path":"./gallery/Summer 2017/",
+               "year":2017,
+               "occasion":"Holidays",
+               "people":"Deividas, Otilija, Gabriele, Anny, Dominykas",
+               "city":"Kaunas, Mount Shannon",
+               "country":"Ireland",
+               "cat":"Summer",
+               "numberOfFiles":90
+             },
+             {
                "name":"Summer 2016",
                "path":"./gallery/Summer.2016/",
                "year":2016,
@@ -34,37 +45,37 @@
                "numberOfFiles":39
              },
              {
-                 "name":"Bank of Ireland Enterprise 2016",
-                 "path":"./gallery/Bank of Ireland Enterprise 2016/",
-                 "year":2016,
-                 "occasion":"Exhibition",
-                 "people":"Otilija, Loreta, Haide",
-                 "city":"Tramore",
-                 "country":"Ireland",
-                 "cat":"Show",
-                 "numberOfFiles":22
+               "name":"Bank of Ireland Enterprise 2016",
+               "path":"./gallery/Bank of Ireland Enterprise 2016/",
+               "year":2016,
+               "occasion":"Exhibition",
+               "people":"Otilija, Loreta, Haide",
+               "city":"Tramore",
+               "country":"Ireland",
+               "cat":"Show",
+               "numberOfFiles":22
              },
              {
-                 "name":"Portugal Holidays",
-                 "path":"./gallery/Portugal 2015/",
-                 "year":2015,
-                 "occasion":"Holidays",
-                 "people":"Otilija, Deividas, Gabriele, Regina",
-                 "city":"Albufeira",
-                 "country":"Portugal",
-                 "cat":"Holidays",
-                 "numberOfFiles":126
+               "name":"Portugal Holidays",
+               "path":"./gallery/Portugal 2015/",
+               "year":2015,
+               "occasion":"Holidays",
+               "people":"Otilija, Deividas, Gabriele, Regina",
+               "city":"Albufeira",
+               "country":"Portugal",
+               "cat":"Holidays",
+               "numberOfFiles":126
              },
              {
-                 "name":"Camping Kerry",
-                 "path":"./gallery/Trip to Kerry/",
-                 "year":2014,
-                 "occasion":"Holidays",
-                 "people":"Otilija, Deividas, Gabriele, Dominykas, Valius, Edita, Andrejus, Jana, Eleonora",
-                 "city":"Kerry",
-                 "country":"Ireland",
-                 "cat":"Holidays",
-                 "numberOfFiles":34
+               "name":"Camping Kerry",
+               "path":"./gallery/Trip to Kerry/",
+               "year":2014,
+               "occasion":"Holidays",
+               "people":"Otilija, Deividas, Gabriele, Dominykas, Valius, Edita, Andrejus, Jana, Eleonora",
+               "city":"Kerry",
+               "country":"Ireland",
+               "cat":"Holidays",
+               "numberOfFiles":34
               },
               {
             	  "name":"Rimas & Diana & Ireland",

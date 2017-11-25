@@ -153,9 +153,15 @@ $(document).ready(function(){
 							image.src = uniqueNames[i].image;
 							image.alt = uniqueNames[i].artist;
 							image.className = "image-responsive";
+							image.id = "image-artist";
 
 
 						$(image).attr({'data-toggle':'tooltip','title':`${uniqueNames[i].des}`});
+						
+						$('#image-artist').bind('cut copy paste', function(e){
+							e.preventDefault();
+							return false;
+						});
 
 						$('#panel-body-'+i).append(image).append('<hr>');
 						$('#panel-body-'+i).append($('<label/>',{'class':'label label-md label-info',text:`${uniqueNames[i].cat}`,'data-tooltip':'toggle','title':`${uniqueNames[i].artist}`}));

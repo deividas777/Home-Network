@@ -29,6 +29,10 @@
                 history.pushState({}, null, '/');
               break;
 
+              case '/video/':
+                history.replaceState({},null, '/video.html');
+              break;
+
               case '/video.html':
                 history.replaceState({},null, '/video');
               break;

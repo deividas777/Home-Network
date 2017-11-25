@@ -18,6 +18,13 @@ $(document).ready(function(){
                 tv_shows = [];
                 albums_collection = [];
                 favourites = [];
+                lotto = [];
+                winnumbers = [{
+                               "numbers":[23,29,37,45,50]
+                             },
+                              {
+                               "numbers":[4,21,34,36,37]
+                              }];
 
             $('title').text(user_id);
             $('body').css({'max-width':'100%'});
@@ -33,9 +40,10 @@ $(document).ready(function(){
 		            {"image":'<i class="fa fa-headphones fa-2x" aria-hidden="true"></i>',"des":"Albums"},
 		            {"image":'<i class="fa fa-film fa-2x" aria-hidden="true">',"des":"Fav Movies"},
 		            {"image":'<i class="fa fa-book fa-2x" aria-hidden="true"></i>',"des":"Fav Books"},
-                    {"image":'<i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>',"des":"Fav Gallery"}		   ,
-                    {"image":'<i class="fa fa-user fa-2x" aria-hidden="true"></i>',"des":"Fav User"},
-                    {"image":'<i class="fa fa-user fa-2x" aria-hidden="true"></i>',"des":"Fav User 2"}
+                {"image":'<i class="fa fa-picture-o fa-2x" aria-hidden="true"></i>',"des":"Fav Gallery"}		   ,
+                {"image":'<i class="fa fa-user fa-2x" aria-hidden="true"></i>',"des":"Fav User"},
+                {"image":'<i class="fa fa-user fa-2x" aria-hidden="true"></i>',"des":"Fav User 2"},
+                {"image":'<i class="fa fa-money fa-2x" aria-hidden="true"></i>',"des":"Lotto"}
 		          ];
 		
         //create multiple tabs
@@ -57,10 +65,86 @@ $(document).ready(function(){
 	/*
 	 * Function changes tabs
 	 */
-		$(function() {
-			    $( "#tabs" ).tabs();
-			});
+		   $(function(){
+			     $( "#tabs" ).tabs();
+			   });
 
+        /**
+         * Execute function when button pressed load content to tab8
+         */
+            $('#li8').click(function(){
+                 //e.preventDefault();
+                 load_tab8();
+            });
+
+
+
+
+            var load_tab8 = function(){
+
+              var tmp_lotto = [];
+              var pickedNumbers = [];
+              var uniqueNumbers = [];
+
+              //var 
+
+
+              if(lotto.length < 5){
+                for(var x = 1; x < 50; x++){
+                  lotto.push(x);
+                }
+              }
+
+              $('#container_favourites').remove();
+                    $('#tabs-8').append($('<div/>',{'class':'container', 'id':'container_favourites'}));
+                    $('#container_favourites').append($('<div/>',{
+                                                        'class':'row',
+                                                        'id':'row-favourites',
+                                                        'style':'width:100%;margin:0.3% 0.2%;background-image:url("./images/backgrounds/spots_background_light_circles_69100_2560x1440.jpg");background-size:cover;background-repeat:no;'}));
+
+
+
+             
+
+                            for(var c in lotto){
+                              while(uniqueNumbers.length != 5){
+                                    var ran = Math.floor(Math.random() * lotto.length);
+                                         pickedNumbers.push(lotto[ran]);
+                                         $.each(pickedNumbers, function(i, el) {
+                                               if ($.inArray(el, uniqueNumbers) === -1) uniqueNumbers.push(el);
+                                             });
+                                        }//end while loop
+                                       }
+
+                for(var i in uniqueNumbers){
+
+                  $('#row-favourites').append($('<div/>',{
+                                              'class':'col-xs-12 col-sm-6 col-md-2 col-lg-2 ',
+                                              'id':'fav-'+i,
+                                              'style':'margin-top:10px;'}));
+
+                  $('#fav-'+i).append($('<div/>',{'class':'panel panel-info','id':'fav-panel-'+i}));
+                  $('#fav-panel-'+i).append($('<div/>',{'class':'panel-heading panel-primary',
+                                              'id':'fav-panel-heading-'+i,html:'<h5><i class="fa fa-file-video-o">  ' + uniqueNumbers[i] + '</i></h5>'}));
+                  $('#fav-panel-'+i).append($('<div/>',{'class':'panel-body',
+                                                        'id':'fav-panel-body-'+i}));
+     
+                 }
+
+                  for(var s in winnumbers){
+                        $('#fav-panel-body-'+i).append($('<div/>',{text:winnumbers[s].numbers}));
+                        console.log(winnumbers[s].numbers);
+                
+                      }
+
+                      
+            
+                       
+
+
+                            
+
+            }//end load_tab8
 
 
         /**
@@ -234,13 +318,15 @@ $(document).ready(function(){
                  load_tab6();
             });
 
-		var load_tab6 = function(){
+		     var load_tab6 = function(){
 
                 setTimeout(function(){
                   loadFavourites();
                 }, 200);
 
-                 displayFavourites = function(){
+
+
+          displayFavourites = function(){
 
                     var tmp = [];
                     var uniqueNames = [];
@@ -252,17 +338,18 @@ $(document).ready(function(){
                     }
 
                     $('#row-favourites').remove();
-					$('#tabs-6').append($('<div/>',{'class':'container', 'id':'container_favourites'}));
-					$('#container_favourites').append($('<div/>',{
-					                                    'class':'row',
-					                                    'id':'row-favourites',
-					                                    'style':'width:100%;margin:0.3% 0.2%;background-image:url("./images/backgrounds/spots_background_light_circles_69100_2560x1440.jpg");background-size:cover;background-repeat:no;'}));
+                    $('#container_favourites').html('');
+          					$('#tabs-6').append($('<div/>',{'class':'container', 'id':'container_favourites'}));
+          					$('#container_favourites').append($('<div/>',{
+					                                              'class':'row',
+					                                              'id':'row-favourites',
+					                                              'style':'width:100%;margin:0.3% 0.2%;background-image:url("./images/backgrounds/spots_background_light_circles_69100_2560x1440.jpg");background-size:cover;background-repeat:no;'}));
 
-                                  for(var i in favourites){
-                                    if($.sha1(user_id) == favourites[i].user){
-                                          tmp.push(favourites[i]);
-                                       }
-                                      }
+                          for(var i in favourites){
+                            if($.sha1(user_id) == favourites[i].user){
+                                  tmp.push(favourites[i]);
+                               }
+                              }
 
                             for(var c in tmp){
                               while(uniqueNames.length != 12){
@@ -280,11 +367,12 @@ $(document).ready(function(){
                              for(var k in uniqueNames){
                                if($.sha1(video[s].title) === uniqueNames[k].loved){
                                   favMovies.push(video[s]);
+                                  console.log(video[s]);
                                 }
                              }
                             }
 
-                            console.log(favMovies);
+                            //console.log(favMovies);
 
                               for(var i in favMovies){
 
@@ -295,24 +383,118 @@ $(document).ready(function(){
 
                                 $('#fav-'+i).append($('<div/>',{'class':'panel panel-info','id':'fav-panel-'+i}));
 
-                                $('#fav-panel-'+i).append($('<div/>',{'class':'panel-heading panel-primary','id':'fav-panel-heading-'+i,html:'<h5><span class="glyphicon glyphicon-music"> ' + favMovies[i].title + '</span></h5>'}));
+                                $('#fav-panel-'+i).append($('<div/>',{'class':'panel-heading panel-primary','id':'fav-panel-heading-'+i,html:'<h5><i class="fa fa-file-video-o">  ' + favMovies[i].title + '</i></h5>'}));
                                 $('#fav-panel-'+i).append($('<div/>',{'class':'panel-body','id':'fav-panel-body-'+i}));
 
-                                $('#fav-panel-body-'+i).append($('<label/>',{
-                                                             'class':'label label-md label-info',
-                                                             text:favMovies[i].title,
-                                                             'data-tooltip':'toggle',
-                                                             'title':favMovies[i].format}));
 
-                                $('#fav-panel-'+i).append($('<div/>',{'class':'panel-footer','id':'fav-panel-footer-'+i,text:i}));
 
+                                var image = new Image(200,200);
+                                image.alt =favMovies[i].title;
+                                image.src = favMovies[i].image;
+                                image.class = "img-responsive";
+                                
+
+                                $('#fav-panel-body-'+i).append(image);
+                                $(image).attr({'data-toggle':'tooltip','title':favMovies[i].des});
+
+                                $('#fav-panel-body-'+i).append($('<i/>',{'class':'fa fa-heartbeat fa-2x pull-right','style':'color:red;'})).append('<hr/>');
+
+
+                               for(var n = 0;n < favMovies[i].rating;n++){
+                                $('#fav-panel-body-'+i).append($('<i/>',{'class':'glyphicon glyphicon-star-empty',
+                                                                         'style':'color:gold',
+                                                                         'data-toggle':'tooltip',
+                                                                         'title':'Average Rating ' + favMovies[i].rating}));
+                               }
+
+                    
+                                $('#fav-panel-'+i).append($('<div/>',{'class':'panel-footer','id':'fav-panel-footer-'+i,'style':'height:50px'}));
+
+                                
+
+                                var image2 =new Image(35,35);
+                                image2.alt = favMovies[i].format;
+                                image2.class = "img-responsive";
+                                    
+                                
+
+                                if(favMovies[i].format == "MP4"){
+                                    image2.alt = favMovies[i].format;
+                                    image2.src  = "./images/icons/mp4.png";
+                                }
+                                if(favMovies[i].format == "AVI"){
+                                    image2.alt = favMovies[i].format;
+                                    image2.src = "./images/icons/avi.png";
+                                }
+                                if(favMovies[i].format == "MKV"){
+                                    image2.alt = favMovies[i].format;
+                                    image2.src = "./images/icons/mkv.png";
+                                }
+
+                                $('#fav-panel-footer-'+i).append(image2);
                                 $('#fav-panel-footer-'+i).append($('<div/>',{
-                                                               'class':'container-fluid',
-                                                               'id':'audio-'+i,
-                                                               'data-tooltip':'toggle',
-                                                               'title':favMovies[i].date}));
+                                                               'class':'btn btn-success btn-md pull-right',
+                                                               'id':'watchMovie',
+                                                               'movie-id':`${favMovies[i].id}`,
+                                                                text:'Watch'}));
 
                                }
+
+                               $('.btn').click(function(){
+
+                                var dependencies = [
+                                          {
+                                            'id':'#movie_window',
+                                            'script':'js/video/_movie_window.js'
+                                          }
+                                          // {
+                                          //   'id':'#age_check',
+                                          //   'script':'js/_ageCheck.js'
+                                          // },
+                                          // {
+                                          //   'id':'#build_tv',
+                                          //   'script':'js/video/_build_tv_shows.js'
+                                          // },
+                                          // {
+                                          //   'id':'#build_video',
+                                          //   'script':'js/video/_build_video.js'
+                                          // },
+                                          // {
+                                          //   'id':'#data',
+                                          //   'script':'js/data/data.js'
+                                          // },
+                                          // {
+                                          //   'id':'videoComments',
+                                          //   'script':'js/video/_video_comments.js'
+                                          // }
+                                        ];
+
+
+                             for(var s in dependencies){
+                               if(!$(dependencies[s].id).length){
+                                 $('head').append($('<script/>',{'src':dependencies[s].script,'id':dependencies[s].id}));
+                               }
+                             }
+
+                             var movieID = $(this).attr('movie-id');
+                             
+                             for(var s in favMovies){
+                                if(favMovies[s].id == movieID){
+                                    var image3 = favMovies[s].image;
+                                    var drive = favMovies[s].drive;
+                                    var video = favMovies[s].video;
+                                    var title = favMovies[s].title;
+                                    var des = favMovies[s].des;
+                                    var cat = favMovies[s].cat;
+                                    break;
+                                }
+                             }
+                             
+
+                             movie_window(drive,video,title,image3,des,cat);
+
+
+                               });//end click #watchMovie
 
 
 
@@ -352,8 +534,11 @@ $(document).ready(function(){
 
                               }
                                 favourites.reverse();
-                                console.log(favourites);
-                                displayFavourites();
+                                //console.log(favourites);
+                                setTimeout(function(){
+                                  displayFavourites();
+                                },500);
+                                
                             },
                             statusCode: {
                                404: function(){
@@ -689,7 +874,7 @@ $(document).ready(function(){
 						$('#panel-body-album-'+i).append($('<span/>',{'class':'glyphicon glyphicon-star-empty','style':'color:gold;heigth:20px;'}));
 					}//end print stars
 							
-					    $('#panel-body-album-'+i).append($('<div/>',{'class':'label label-lg label-danger pull-right','id':'album-tracks','data-artist':albums_collection[uniqueNames[i]].artist,'data-album':albums_collection[uniqueNames[i]].album_title,html:'Tracks: <span class="badge">' + albums_collection[uniqueNames[i]].number_tracks + '</badge>'}));
+					  $('#panel-body-album-'+i).append($('<div/>',{'class':'label label-lg label-danger pull-right','id':'album-tracks','data-artist':albums_collection[uniqueNames[i]].artist,'data-album':albums_collection[uniqueNames[i]].album_title,html:'Tracks: <span class="badge">' + albums_collection[uniqueNames[i]].number_tracks + '</badge>'}));
 						$('#panel-albums-'+i).append($('<div/>',{'class':'panel-footer','id':'panel-footer-albums-'+i}));
 						$('#panel-footer-albums-'+i).append($('<button/>',{'class':'btn btn-warning','id':'artist_albums',text:'Play','data-album':albums_collection[uniqueNames[i]].album_title}));
 						
@@ -862,18 +1047,9 @@ $(document).ready(function(){
 							icon.className = "img-responsive pull-right";
 							
 							
-								if(video[uniqueNames[i]].format == "MP4"){
-									icon.alt = "MP4";
-									icon.src = "./images/icons/mp4.png";
-								}
-								if(video[uniqueNames[i]].format == "AVI"){
-									icon.alt = "MP4";
-									icon.src = "./images/icons/avi.png";
-								}
-								if(video[uniqueNames[i]].format == "MKV"){
-									icon.alt = "MP4";
-									icon.src = "./images/icons/mkv.png";
-								}
+								
+
+
 								
 							$(icon).attr({'data-tooltip':'toggle','title':'Video Format ' + video[uniqueNames[i]].format});
 							$('#video-panel-body-'+i).append($('<label/>',{'class':'label label-md label-info pull-right','data-tooltip':'toggle','title':'Genre: ' + video[uniqueNames[i]].cat,text:video[uniqueNames[i]].cat}));
@@ -1249,7 +1425,7 @@ $(document).ready(function(){
 					
 					if(collectionId == 'video'){	
 				        for(var x in data.video){		        			     
-				        	var obj = new Object({"id":data.video[x].id,"title":data.video[x].title,"format":data.video[x].format,"url":data.video[x].url,"des":data.video[x].des,"image":data.video[x].image,"video":data.video[x].video,"cat":data.video[x].cat,"rating":data.video[x].rating});
+				        	var obj = new Object({"id":data.video[x].id,"drive":data.video[x].drive,"title":data.video[x].title,"format":data.video[x].format,"url":data.video[x].url,"des":data.video[x].des,"image":data.video[x].image,"video":data.video[x].video,"cat":data.video[x].cat,"rating":data.video[x].rating});
 				        	video.push(obj);	
 				        }
 					}

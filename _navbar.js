@@ -60,7 +60,7 @@ $(document).ready(function(){
 	                   },
 	                   {
 	                	   "name":"User",
-	                	   "href":"https://cnhv.co/f3nu",
+	                	   "href":"user.html",
 	                	   "icon":"glyphicon glyphicon-user"
 	                   },
 	                   {

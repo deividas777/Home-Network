@@ -24,7 +24,7 @@
 										  $('.modal-body').append($('<img/>',{'src':image,'class':'img-responsive','width':'250px','height':'280px','id':'poster-image'})).append('<br />');
 										  $('.modal-body').append($('<button/>',{'type':'button','class':'btn btn-primary',text:"About Movie",'data-container':'body','data-toggle':'popover','data-placement':'right','data-content':des})).append('<br><br />');
 
-                                     if(!drive){
+                                   if(!drive){
 
                                      setTimeout(function(){
 											var image = new Image(50,35);
@@ -43,10 +43,10 @@
 
 											$(image).attr({'margin':'auto','data-toggle':'tooltip','title':'Available to everyone'});
 											$('.modal-title').fadeIn(2000, function(){ $(this).append(image)});
-                                     	}, 1200);
+                                     	}, 1200);//end setTimeout
 
 										  $('.modal-body').append($('<div/>',{'class':'player_modal'}));
-										  $('.player_modal').append($('<video/>',{'id':'video-player','width':'350','height':'220','controls':'controls', 'preload':'metadata'})).css({'margin':'2px'});
+										  $('.player_modal').append($('<video/>',{'id':'video-player','width':'350','height':'220','controls':'controls', 'controlsList':'nodownload','preload':'metadata'})).css({'margin':'2px'});
 										  $('#video-player').append($('<source/>',{'src':movie}));
 
                                       }else if(drive === 'g'){
@@ -57,12 +57,20 @@
 											image.className = 'img-responsive pull-right';
 											image.alt = "Secure Icon";
 
-										$(image).bind({
+								$(image).bind({
 										 mouseenter: function(){
 										    $(this).attr({'margin':'auto','data-toggle':'tooltip','title':'Protected: Only Users with Permissions can view this file'});
 										 },
 										 mouseleave: function(){
 										    $(this).removeAttr('data-toggle').removeAttr('title');
+										 },
+										 copy: function(e){
+                                             e.preventDefault();
+                                             return false;
+										 },
+										 paste: function(e){
+										 	e.preventDefault();
+										 	return false;
 										 }
 										});
 
@@ -122,19 +130,21 @@
 
 
                           $('#similar-movies p').hover(function(e){
-																  e.preventDefault();
 
-																  var id = $(this).attr('id');
-																  var image = new Image(80, 60);
+									  e.preventDefault();
 
-																  for(var x in video){
-																		if(video[x].title == tmp[id]){
-																		   image.src = video[x].image;
-																		   image.className = "img-responsive";
-																		   image.alt = tmp[id];
-																		   image.id = "similarMovies";
-																		}
-															  }
+									  var id = $(this).attr('id');
+									  var image = new Image(80, 60);
+
+									  for(var x in video){
+											if(video[x].title == tmp[id]){
+											   image.src = video[x].image;
+											   image.className = "img-responsive";
+											   image.alt = tmp[id];
+											   image.id = "similarMovies";
+											}
+								  }
+
                                   $(this).html(image);
 
                                                  $('img').mouseenter(function(e){
@@ -160,7 +170,7 @@
                                                       id = null;
 
                                                  });
-                                          });
+                                          });//end $('#similar-movies p').hover
 
 										/*
 										 * Change background image, depends on category
@@ -222,9 +232,9 @@
 						                       {"cat":"Drama","image":"./images/backgrounds/drama2.jpeg"},
 						                       {"cat":"Drama","image":"./images/backgrounds/drama3.jpeg"},
 						                       {"cat":"Drama","image":"./images/backgrounds/drama4.jpeg"},
-						                       {"cat":"Drama","image":"./images/backgrounds/drama5.jpeg"}
-																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIczVGZ1ZKWjBhUFk/preview"},
-																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIZ29QeHJSMlA2UE0/preview"},
+						                       {"cat":"Drama","image":"./images/backgrounds/drama5.jpeg"},
+																	  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIczVGZ1ZKWjBhUFk/preview"},
+																	  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyIZ29QeHJSMlA2UE0/preview"},
 																	//  {"cat":"Comedy","image":"https://drive.google.com/file/d/0B1QfHow5azyILVlneGFJaXhWODA/preview"}
 						                      ];
 
@@ -235,7 +245,9 @@
 							   if(backgrounds[x].cat == category){
 								   tmp_coll.push(backgrounds[x]);
 									 var tmp = Math.floor(Math.random() * tmp_coll.length);
-									 $(element).css({'background-image': 'url("'+ tmp_coll[tmp].image +'")','background-repeat':'no-repeat','background-size':'cover','opacity':'0'}).animate({'opacity':'1'}, 2500);
+									 $(element).css({'background-image': 'url("'+ tmp_coll[tmp].image +'")',
+									 				 'background-repeat':'no-repeat',
+									 				 'background-size':'cover','opacity':'0'}).animate({'opacity':'1'}, 2500);
 								  }
 						   }
 

@@ -24,9 +24,9 @@ state = false;
 
 
 			    $('#video').append($('<div/>',{
-															 'class':'col-xs-6 col-md-3 col-lg-4 col-sm-6',
-															 'id':'videos_'+ x,
-															 'style':'margin-top:12px;'}));
+											 'class':'col-xs-6 col-md-3 col-lg-4 col-sm-6',
+											 'id':'videos_'+ x,
+											 'style':'margin-top:12px;'}));
 
 				  $('#videos_'+x).append($('<div/>',{'class':'panel panel-default','id':'panel_'+x}));
 
@@ -57,29 +57,29 @@ state = false;
 					}
 
 				$('#panel_'+x).append($('<div/>',{
-																'class':'panel-heading',
-																html:`<h5><label class="${label}"> ${tv_shows[x].title} Season: ${tv_shows[x].season} </label></h5>`}))
-															 .append($('<label/>',{'class':`${label}`,text:`${diffDays}`}));
+												'class':'panel-heading',
+												 html:`<h5><label class="${label}"> ${tv_shows[x].title} Season: ${tv_shows[x].season} </label></h5>`}))
+											    .append($('<label/>',{'class':`${label}`,text:`${diffDays}`}));
 
 				$('#panel_'+x).append($('<div/>',{'class':'panel-body','id':'panel-body-'+x}));
 
 				$('#panel-body-'+x).append($('<img/>',{
-																		 'class':'img-responsive','data-toggle':'tooltip',
-																		 'title':tv_shows[x].des,
-																		 'src':tv_shows[x].image,
-																		 'width':'150px',
-																		 'height':'120px',
-																		 'alt':tv_shows[x].title}));
+														 'class':'img-responsive','data-toggle':'tooltip',
+														 'title':tv_shows[x].des,
+														 'src':tv_shows[x].image,
+														 'width':'150px',
+														 'height':'120px',
+														 'alt':tv_shows[x].title}));
 
 				$('#panel-body-'+x).append($('<div/>',{
-																		 'id':'tv_shows_button',
-																		 'data-state':state,
-																		 'class':'btn btn-sm btn-info pull-right',
-																		 'data-series':tv_shows[x].season,
-																		 'data-title':tv_shows[x].title,
-																		 'data-count':tv_shows[x].videos.length,
-																		 'data-cat':tv_shows[x].cat,
-																		 text:'Watch'}));
+														 'id':'tv_shows_button',
+														 'data-state':state,
+														 'class':'btn btn-sm btn-info pull-right',
+														 'data-series':tv_shows[x].season,
+														 'data-title':tv_shows[x].title,
+														 'data-count':tv_shows[x].videos.length,
+														 'data-cat':tv_shows[x].cat,
+														 text:'Watch'}));
 
 		 }//end for(var x in tv_shows)
 

@@ -193,7 +193,7 @@ $(document).ready(function(){
 									                            'class':'fa fa-file-pdf-o fa-lg pull-right',
 									                            'data-toggle':'tooltip',
 									                            'title':collection[x].format,
-									                             'style':'color:red;'}));
+									                            'style':'color:red;'}));
 								}								
 								$('#panel-footer-'+x).append($('<div/>',{'class':'btn btn-sm btn-info','id':'btn-'+x, text:"Read",'data-url':collection[x].url}));
 						/*

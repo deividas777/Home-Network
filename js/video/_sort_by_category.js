@@ -21,7 +21,7 @@
 					   }
 
 
-		     		    for(var x in collection){
+		     		for(var x in collection){
 			     			if(collection[x].cat === sort_category){
 			     			    var obj = new Object(video[x]);
 			     				movieCategory.push(obj);

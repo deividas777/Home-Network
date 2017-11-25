@@ -17,7 +17,8 @@ $(document).ready(function(){
 	   var video = [
 	                 "./images/sharedImages/join1.png",
 	                 "./images/sharedImages/join2.png",
-	                 "./images/sharedImages/join3.png"
+	                 "./images/sharedImages/join3.png",
+	                 "./images/sharedImages/join4.png"
 	                 ];
 	                 
 	  var carousel = function(collection){ 
